@@ -19,15 +19,13 @@ while True:
 
   match_cnt = 0
   goal_cnt = 0
-  for i in range(4):
-    if num_list[i] in guess_num:
-      match_cnt += 1
 
   for i in range(4):
     if num_list[i] == guess_num[i]:
       goal_cnt += 1
-      match_cnt -= 1
-
+    elif num_list[i] in guess_num:
+      match_cnt += 1
+    
   if goal_cnt == 4:
     print('win')
     break
